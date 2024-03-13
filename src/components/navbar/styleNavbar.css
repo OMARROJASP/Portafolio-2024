@@ -1,0 +1,62 @@
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+}
+
+.navbar .navbar-toggle {
+    font-size: 24px; /* Ajusta el tamaño del icono según sea necesario */
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    color: #ccc;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .nav-links li.hide-on-small-screen {
+        display: none; /* Ocultar opciones en pantallas pequeñas */
+    }
+
+    .navbar .navbar-toggle {
+        margin-top: 10px; /* Mueve el icono al mismo nivel que el logo en pantallas pequeñas */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-toggle {
+        display: none;
+    }
+}
